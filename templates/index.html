@@ -1,0 +1,54 @@
+<!-- 使用bootstrap框架 -->
+{% extends "bootstrap/base.html" %} 
+
+
+{%- block head %}
+    <title>NJUPT Spider V0.1</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="NJUPT">
+
+    {%- block styles %}
+    <!-- Bootstrap -->
+    <link href="{{bootstrap_find_resource('css/bootstrap.css', cdn='bootstrap')}}" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+{#    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">#}
+        <!-- bb——这里是通过下载网页上的css文件，保存在static目录下即可-->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+      <!-- bb——这里是通过下载网页上的css文件，保存在static目录下即可-->
+    <link href="static/css/carousel.css" rel="stylesheet"> 
+    <!-- <link href=index.css" rel="stylesheet"> -->
+    <!-- <style type="text/css">
+        body{
+            background-color: black;
+        }
+    </style> -->
+    {%- endblock styles %}
+
+{%- endblock head %}
+
+
+
+{% block body -%}
+<body style="background-color: black;">
+    <!-- 创建表单，定义表单数据发送方法 -->
+    <form action="" method="post" >
+        <div id="inBox" style="position: absolute; height:300px; width: 80%; top: 20%;">
+            <!-- NJUPT Spider -->
+            <p style="font-size: 50px; font-weight: bold; color: white; position: absolute; margin: auto; left: 37%; right: 30%; top: 10px;">NJUPT Spider</p>
+            <!-- input框 -->
+            <div style="position: absolute;height: 40px; width: 100%;  top: 100px; ">
+                <p style="font-size: 25px; font-weight: bold; left: 20%; margin: 0;position: absolute; color: white;">url:</p>
+                <input type="text"  name="url" id="inText" class="inEle" style="position: absolute; margin: auto; left: 25%; right: 25%; height: 40px; width: 50%; background-color: white;">
+            </div> 
+            <!-- 提交按钮 -->
+            <input type="submit" value="Start" id="inSub" class="inEle" style="position: absolute; margin: auto; left: 30%; right: 30%; height: 40px; width: 10%;  top: 180px; background-color: white; border: 0;font-size: large; font-weight: bold; border-radius:10px;" > 
+        </div>
+    
+    </form>
+
+</body>
+{%- endblock body %}

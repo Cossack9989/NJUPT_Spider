@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+}
+
+#inBox{
+    position: absolute;
+    height:300px;
+    width: 100%;
+}
+
+.inEle{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+#inText{
+    height: 40px;
+    width: 500px;  
+    top: 100px; 
+}
+
+#inSub{
+    height: 35px;
+    width: 100px;
+    top:200px;
+    
+}
